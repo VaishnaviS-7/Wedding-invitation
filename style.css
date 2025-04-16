@@ -102,7 +102,7 @@ body {
   
   .ring-img {
     width: 60px;
-    animation: ringBounce 0.1s ease-in-out infinite;
+    animation: ringBounce 3s ease-in-out infinite;
   }
   /* .ring-img {
     width: 60px;
