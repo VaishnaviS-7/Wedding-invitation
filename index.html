@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Wedding Invitation</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+
+
+
+</head>
+<body>
+  
+  <div class="invitation">
+    <h1><span class="name">Shraddha</span> <span class="heart">❤️</span> <span class="name">Pavan Raj Hegde</span></h1>
+    <!-- <h2>We joyfully invite you to celebrate our wedding</h2> -->
+     <h2>A journey of a thousand miles begins with a single step... Join us as we step into the most beautiful chapter of our lives</h2>
+    <h3 id="wedding-date"  class="typewriter-date">25<sup>th</sup> Sept 2025</h3>
+
+    <!-- Ring image is now placed below the date -->
+    <div class="ring-wrapper">
+      <img src="./images/ring_PNG6.png" alt="Wedding Ring" class="ring-img" />
+    </div>
+
+    <p class="venue">, Udupi, Karnataka</p>
+    <div id="countdown"></div>
+
+    <a href="https://maps.app.goo.gl/WhHoMeHSzR6PsnHW9" target="_blank" class="location-btn">
+      <i class="fas fa-map-marker-alt"></i> View Location
+    </a>
+    <p class="footer">With love,<br/>From us & our families </p>
+  </div>
+
+  <!-- Floating Hearts/Petals -->
+  <div class="floating-container"></div>
+
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <source src="music.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</body>
+</html>

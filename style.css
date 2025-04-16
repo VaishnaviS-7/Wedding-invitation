@@ -1,0 +1,222 @@
+/* Base Styles */
+
+body {
+    margin: 0;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight:100;
+    font-style: normal;
+    background: linear-gradient(to right, #ffe4ec, #fff0f5);
+    color: #4b2e2e;
+    text-align: center;
+    overflow-x: hidden;
+    transition: background 0.5s ease, color 0.5s ease;
+    animation: backgroundShift 10s ease-in-out infinite;
+    touch-action: manipulation;
+  }
+  
+  body, * {
+    cursor: default !important;
+  }
+  
+  .invitation {
+    margin-top: 50px;
+    padding: 20px;
+  }
+  
+  h1, .name, .heart, h2, h3, .venue, .footer {
+    word-wrap: break-word;
+  }
+  
+  h1 {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px #e5a1c1;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .name {
+    color: #b30059;
+    margin: 0;
+    padding: 5px;
+  }
+  
+  .heart {
+    font-size: 2rem;
+    vertical-align: middle;
+    animation: pulse 1s infinite;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+    margin: 10px 0;
+  }
+  
+  h3 {
+    font-size: 2rem;
+    color: #e60073;
+  }
+  
+  .venue {
+    font-weight: bold;
+    color: #d63384;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  #countdown {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    font-weight: bold;
+  }
+  
+  .location-btn {
+    display: inline-block;
+    background: #ff66b2;
+    color: white;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .location-btn:hover {
+    background: #cc005f;
+  }
+  
+  .footer {
+    margin-top: 40px;
+    font-style: italic;
+    font-size: 1.1rem;
+  }
+  
+  .ring-wrapper {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    z-index: 10;
+  }
+  
+  .ring-img {
+    width: 60px;
+    animation: ringBounce 3s ease-in-out infinite;
+  }
+  /* .ring-img {
+    width: 60px;
+    animation: rotateRing 5s linear infinite;
+  }
+  
+  @keyframes rotateRing {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(60deg);
+    }
+  } */
+  
+  
+  /* Animations */
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    50% { transform: translateY(-50vh) rotate(180deg); opacity: 0.7; }
+    100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+  }
+  
+  @keyframes colorChange {
+    0%, 100% { color: #ff66b2; }
+    25% { color: #ff99cc; }
+    50% { color: #ff80ab; }
+    75% { color: #ff6699; }
+  }
+  
+  @keyframes backgroundShift {
+    0%, 100% { background: linear-gradient(to right, #ffe4ec, #fff0f5); }
+    50% { background: linear-gradient(to left, #ffe4ec, #fff0f5); }
+  }
+  
+  @keyframes ringBounce {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(-10deg); }
+  }
+  
+  @keyframes typewriter-date {
+    from { width: 0; }
+    to { width: 14ch; border-right: none; }
+  }
+  
+  .typewriter-date {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 1px solid #b30059;
+    width: 0;
+    animation: typewriter-date 3s steps(30) 1s forwards;
+  }
+  
+  .floating-container {
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .floating-container span {
+    position: absolute;
+    font-size: 20px;
+    animation: float 6s ease-in-out infinite, colorChange 4s linear infinite;
+    transition: all 0.2s ease-in-out;
+    pointer-events: none;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+    h1 { font-size: 1.8rem; white-space: normal; }
+    .name, .heart { font-size: 1.6rem; white-space: normal; }
+    h2 { font-size: 1rem; }
+    h3 { font-size: 1.4rem; }
+    .venue, .footer { font-size: 1rem; }
+    .ring-img { width: 50px; }
+    .location-btn { font-size: 1.2rem; }
+  }
+  
+  @media (min-width: 601px) and (max-width: 768px) {
+    h1, .name, .heart { font-size: 2rem; }
+    h2 { font-size: 1.2rem; }
+    h3 { font-size: 1.8rem; }
+    .venue, .footer { font-size: 1.2rem; }
+    .ring-img { width: 55px; }
+    .location-btn { font-size: 1.3rem; }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    h1, .name, .heart { font-size: 2.5rem; }
+    h2 { font-size: 1.3rem; }
+    h3 { font-size: 1.9rem; }
+    .venue, .footer { font-size: 1.3rem; }
+    .ring-img { width: 60px; }
+    .location-btn { font-size: 1.4rem; }
+  }
+  
+  @media (min-width: 1025px) {
+    h1, .name, .heart { font-size: 3rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 2rem; }
+    .venue, .footer { font-size: 1.5rem; }
+    .ring-img { width: 70px; }
+    .location-btn { font-size: 1.5rem; }
+  }
+
+  
